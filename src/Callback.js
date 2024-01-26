@@ -6,10 +6,11 @@ const Callbacks=()=>{
     }, [count]);
     return (
         <div>
-            <button onClick={handleClick}>Click me</button>
+            <button onClick={handleClick}>LOVE ME OR HATE ME</button>
             <p>Count: {count}</p>
-            <button onClick={() =>setCount(count+1)}>Increment</button>
-            <button onClick={() =>setCount(count-1)}>Decrement</button>
+            <button onClick={() =>setCount(count+1)}>LOVE</button>
+            <p>vs</p>
+            <button onClick={() =>setCount(count-1)}>HATE</button>
         </div>
     );
     };

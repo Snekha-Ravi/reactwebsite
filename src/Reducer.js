@@ -2,28 +2,27 @@ import React from 'react';
 import './Reducer.css';
 import { useReducer } from 'react';
 
-const counterReducer = (state, action) => {
+const emojiReducer = (state, action) => {
   switch (action.type) {
-    case 'INCREMENT':
-      return { count: state.count + 1, emoji: '💕' };
-    case 'DECREMENT':
-      return { count: state.count - 1, emoji: '❤️' };
+    case 'LOVE':
+      return { emoji: '❤️' };
+    case 'HATE':
+      return { emoji: '💔' };
     default:
       return state;
   }
 };
 
 export default function Reducer() {
-  const [state, dispatch] = useReducer(counterReducer, { count: 0, emoji: '💕' });
+  const [state, dispatch] = useReducer(emojiReducer, { emoji: 'LOVE OR HATE' });
 
   return (
     <div>
-      <p>
-        COUNT : {state.count} {state.emoji}
-      </p>
+      <p>{state.emoji}</p>
 
-      <button onClick={() => dispatch({ type: 'INCREMENT' })}>💕</button>
-      <button onClick={() => dispatch({ type: 'DECREMENT' })}>❤️</button>
+      <button onClick={() => dispatch({ type: 'LOVE' })}>LOVE</button>
+      <p>vs</p>
+      <button onClick={() => dispatch({ type: 'HATE' })}>HATE</button>
     </div>
   );
 }
