@@ -1,0 +1,17 @@
+/* Counter.css */
+.Container {
+    text-align: center;
+    background-color: lightyellow;
+  }
+  .counter-box {
+    border: 1px solid #ddd;
+    padding: 2px;
+    margin: 20px;
+  }
+  
+  .button-container button {
+    margin: 10px;
+    background-color: lightgreen;
+    
+  }
+  

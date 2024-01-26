@@ -1,8 +1,9 @@
 .nav-bar{
     display: flex;
-    background-color: rgb(147, 255, 250);
+    background-color:darkseagreen;
     padding: 15px;
     list-style-type: none;
     justify-content: space-around;
-    gap:20px;
+   
+
   }
